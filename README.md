@@ -1,8 +1,9 @@
-COROPITを使用する方は以下のようにコードを編集してください。
+COROPITを使用する方は以下のようにコードを編集してください
 
 mona2_r.overlay
 
 修正前
+
 ```
   trackball_central: trackball_central@0 {
         status = "okay";
@@ -21,7 +22,9 @@ mona2_r.overlay
 };
 
 ```
+
 **修正後**
+
 ```
   trackball_central: trackball_central@0 {
         status = "okay";
