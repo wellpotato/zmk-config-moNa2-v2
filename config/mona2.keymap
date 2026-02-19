@@ -67,7 +67,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-            tap-ms = <5>;
+            tap-ms = <20>;
         };
     };
 
@@ -105,6 +105,8 @@
 &kp LEFT_SHIFT    &trans          &trans          &trans           &trans  &trans    &kp LC(UP_ARROW)    &trans               &mkp MB4  &mkp MB5  &trans  &trans
 &kp LEFT_CONTROL  &trans          &trans          &trans           &trans  &trans    &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)                              &trans
             >;
+
+            sensor-bindings = <&scroll_right_left>;
         };
 
         layer_2 {

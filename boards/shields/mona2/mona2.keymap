@@ -67,7 +67,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-            tap-ms = <5>;
+            tap-ms = <20>;
         };
     };
 
