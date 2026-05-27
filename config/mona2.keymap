@@ -128,6 +128,8 @@
 &trans  &trans        &trans  &trans  &trans  &trans    &trans                &trans          &trans  &trans  &trans  &trans
 &trans  &trans        &trans  &trans  &trans  &trans    &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                          &trans
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_4 {
