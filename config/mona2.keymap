@@ -21,10 +21,6 @@
     flavor = "balanced";
 };
 
-&msc {
-    trigger-period-ms = <1>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -48,21 +44,6 @@
             label = "TO_LAYER_0";
         };
 
-        scroll_up: scroll_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <2>;
-            tap-ms = <0>;
-            bindings = <&macro_press &msc SCRL_UP>, <&macro_release &msc SCRL_UP>;
-        };
-
-        scroll_down: scroll_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <2>;
-            tap-ms = <0>;
-            bindings = <&macro_press &msc SCRL_DOWN>, <&macro_release &msc SCRL_DOWN>;
-        };
     };
 
     behaviors {
@@ -78,13 +59,15 @@
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&scroll_up>, <&scroll_down>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
         };
 
         scroll_right_left: mouse_wheel_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            tap-ms = <20>;
         };
     };
 
