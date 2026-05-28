@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 5
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
 #include <dt-bindings/zmk/pointing.h>
 #define MOUSE 5
@@ -19,6 +19,10 @@
 &lt {
     quick-tap-ms = <300>;
     flavor = "balanced";
+};
+
+&msc {
+    trigger-period-ms = <1>;
 };
 
 / {
@@ -47,7 +51,7 @@
         scroll_up: scroll_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
+            wait-ms = <2>;
             tap-ms = <0>;
             bindings = <&macro_press &msc SCRL_UP>, <&macro_release &msc SCRL_UP>;
         };
@@ -55,7 +59,7 @@
         scroll_down: scroll_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
+            wait-ms = <2>;
             tap-ms = <0>;
             bindings = <&macro_press &msc SCRL_DOWN>, <&macro_release &msc SCRL_DOWN>;
         };
